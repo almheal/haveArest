@@ -1,0 +1,165 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  height: 85px;
+  & .container {
+    padding: 0;
+  }
+}
+
+.header__inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 25px;
+  background-color: #fff;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header__row-select {
+  display: flex;
+  align-items: center;
+}
+
+.header__select {
+  padding-left: 25px;
+  cursor: pointer;
+  &:first-child {
+    padding-left: 0;
+  }
+}
+
+.select__arrow {
+  width: 8px;
+  height: 8px;
+  margin-left: 5px;
+}
+
+.messanger {
+  width: 27px;
+  height: 27px;
+}
+
+.number {
+  display: inline-block;
+  margin-left: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+  &:hover {
+    color: #000;
+    transition: 0.3s;
+  }
+}
+
+.number__icon {
+  display: none;
+  width: 27px;
+  height: 27px;
+}
+
+.logo {
+  display: block;
+}
+
+.logo__img {
+  width: 169px;
+  height: 32px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.social__row {
+  display: flex;
+}
+
+.social__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: #f7d3d3;
+    transition: 0.3s;
+  }
+  &:hover .social__icon {
+    fill: #000;
+    transition: 0.3s;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__icon {
+  width: 13px;
+  height: 13px;
+  fill: #a8a8a8;
+  transition: 0.3s;
+}
+
+.suitcase {
+  width: 18px;
+  height: 37px;
+  margin: 0 30px;
+}
+
+.burger__menu {
+  position: relative;
+  display: block;
+  width: 56px;
+  height: 32px;
+  background-color: transparent;
+  &:hover::after {
+    width: 50%;
+    transition: 0.3s;
+  }
+  &::before,
+  &::after {
+    content: '';
+    background-color: #0c0c0c;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+  }
+  &::before {
+    transform: translateY(calc(-50% - 5px));
+  }
+  &::after {
+    transform: translateY(calc(-50% + 5px));
+  }
+  &.active {
+    &::after,
+    &::before {
+      left: 50%;
+      top: 50%;
+      width: 65%;
+    }
+    &::after {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &::before {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}

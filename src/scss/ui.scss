@@ -1,0 +1,21 @@
+.button__primary {
+  background-color: #464649;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 600;
+  width: 155px;
+  padding: 14px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  transition: 0.3s;
+  &:hover {
+    background-color: #242424;
+    border-color: #242424;
+    transition: 0.3s;
+  }
+}
